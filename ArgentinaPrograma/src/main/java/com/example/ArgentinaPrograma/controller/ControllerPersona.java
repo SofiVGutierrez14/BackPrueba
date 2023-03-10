@@ -24,7 +24,7 @@ public class ControllerPersona {
   @Autowired
   private IPersonaService persoServ;
   
-   @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+   
     @PostMapping("/personas/crear")
    public  String agregarPersona( @RequestBody Persona perso){
      persoServ.savePersona(perso); 
