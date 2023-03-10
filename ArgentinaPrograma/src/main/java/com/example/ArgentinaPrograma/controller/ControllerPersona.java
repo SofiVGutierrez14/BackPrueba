@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://hosting-angular-49dee.web.app")
 public class ControllerPersona {
     
   @Autowired
@@ -31,7 +31,7 @@ public class ControllerPersona {
      return "La persona fue creada correctamente";
  
     }
-     @GetMapping("personas/ver")
+     @GetMapping("/personas/ver")
     @ResponseBody
     public List<Persona> getPersonas(){
         return persoServ.getPersonas();
