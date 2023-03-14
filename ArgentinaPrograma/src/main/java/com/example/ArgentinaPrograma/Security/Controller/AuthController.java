@@ -54,7 +54,7 @@ public class AuthController {
     JwtProvider jwtProvider;
 
     
-    @PreAuthorize("hasAuthority")
+    
     @PostMapping("/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) 
