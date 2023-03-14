@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
     }
    @GetMapping("/habilidades/ver")
     @ResponseBody
-    public List<Habilidad> verHabilidad(){
+    public List<Habilidad> verHabilidades(){
         return habiServ.verHabilidades();
 }
     @DeleteMapping("/habilidad/delete/{id}")
