@@ -39,8 +39,9 @@ public class ControllerExperiencia {
     
     
      @DeleteMapping("/experiencias/borrar/{id}")
-    public void borrarExperiencia (@PathVariable int id){
+    public String borrarExperiencia (@PathVariable int id){
     expServ.borrarExperiencia(id);
+     return "La experiencia fue eliminada correctamente";
     }
     
     

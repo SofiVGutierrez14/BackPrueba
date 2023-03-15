@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,16 +24,18 @@ import org.springframework.web.bind.annotation.RestController;
     @PostMapping("/habilidad/crear")
    public void agregarHabilidad( @RequestBody Habilidad hab){
      habiServ.crearHabilidad(hab); 
- 
-    }
+   }
+   
+   
    @GetMapping("/habilidades/ver")
     @ResponseBody
     public List<Habilidad> verHabilidades(){
         return habiServ.verHabilidades();
 }
     @DeleteMapping("/habilidad/delete/{id}")
-    public void borrarHabilidad (@PathVariable Long id){
+    public String borrarHabilidad (@PathVariable Long id){
         habiServ.borrarHabilidad(id);
+        return "La habilidad fue eliminada correctamente";
     
     }
      

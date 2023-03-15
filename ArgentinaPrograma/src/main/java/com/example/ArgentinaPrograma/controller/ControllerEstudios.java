@@ -36,8 +36,9 @@ public class ControllerEstudios {
 }
      
     @DeleteMapping("/estudios/borrar/{id}")
-    public void borrarEstudio (@PathVariable Long id){
+    public String borrarEstudio (@PathVariable Long id){
         estServ.borrarEstudio(id);
+         return "El estudio fue eliminado correctamente";
     
     }
     
